@@ -1,12 +1,12 @@
 import { withRouter} from 'next/router'
 import Link from 'next/link'
-const color = 'red'
-const A = ({router, name}) => 
+const color = 'red';
+const A = ({router, name}) =>
     <>
         <Link href="#aaa">
             <a className='link'>A{router.query.id}{name}</a>
         </Link>
-        
+
         <style jsx>{`
             a{
                 color: blue
@@ -20,15 +20,12 @@ const A = ({router, name}) =>
         a{
             color: green
         }
-        `}   
+        `}
         </style>
     </>
     // css in js保证组件间的样式是隔离的
-    
-
 
 // pages下调用此方法才有效
-
 
 A.getInitialProps = async () => {
     console.log('************')
@@ -42,6 +39,6 @@ A.getInitialProps = async () => {
             )
         }, 500)
     })
-    return await promise    
+    return await promise
 }
 export default withRouter(A)

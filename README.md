@@ -1,3 +1,4 @@
+## react + koa2 + redis 项目 课程学习
 > 项目目录结构
 
 pages 放置next所有页面，且会根据此目录生成路由
